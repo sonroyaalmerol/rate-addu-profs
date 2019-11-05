@@ -2,10 +2,19 @@
   <q-layout view="lHh Lpr lFf" class="fit row wrap justify-center items-start">
     <q-header class="row wrap justify-center items-start">
       <q-toolbar class="col-md-7 col-sm-10 col-xs-12">
-        <q-toolbar-title class="col-md-2 col-sm-4 col-xs-7 ">
+        <q-toolbar-title class="col-md-2 col-sm-4 col-xs-12">
           Rate AdDU Profs
         </q-toolbar-title>
-        <q-input class="q-ma-sm col-md-10 col-sm-8 col-xs-5" rounded dark standout
+        <q-input class="q-ma-sm col-md-10 col-sm-8 gt-xs" rounded dark standout
+          v-model="search" placeholder="Search Professor/Class"
+        >
+          <template v-slot:append>
+            <q-icon name="search" />
+          </template>
+        </q-input>
+      </q-toolbar>
+      <q-toolbar class="lt-sm">
+        <q-input class="q-ma-sm col-xs-12" rounded dark standout
           v-model="search" placeholder="Search Professor/Class"
         >
           <template v-slot:append>
@@ -25,13 +34,15 @@
         <q-tab name="contactDev" label="Contact Dev" />
       </q-tabs>
     </q-header>
-    <q-page-container class="fit row wrap justify-center items-start ripple-background q-mx-lg">
+    <q-page-container class="fit row wrap justify-center items-start q-mx-lg">
       <router-view class="col-md-7 col-sm-10 col-xs-12" />
-      <div class="circle xxlarge shade1"></div>
-      <div class="circle xlarge shade2"></div>
-      <div class="circle large shade3"></div>
-      <div class="circle mediun shade4"></div>
-      <div class="circle small shade5"></div>
+      <div class="ripple-background gt-xs">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle mediun shade4"></div>
+        <div class="circle small shade5"></div>
+      </div>
     </q-page-container>
 
   </q-layout>
@@ -39,7 +50,7 @@
 
 <script>
 export default {
-  name: 'MyLayout',
+  name: 'MainLayout',
 
   data() {
     return {
@@ -51,6 +62,7 @@ export default {
 </script>
 
 <style scoped>
+
 .circle{
   position: absolute;
   border-radius: 50%;

@@ -2,7 +2,7 @@
   <q-page>
     <q-card style="width: 100%" flat>
       <q-card-section class="q-ma-lg">
-        <div class="text-h3">
+        <div class="text-h3 q-my-lg">
           Hello Students!
         </div>
         <div class="text-subtitle2">
