@@ -18,7 +18,7 @@
       </q-card-section>
     </q-card>
     <q-card class="row" flat>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-4 col-xs-12">
         <q-card-section>
           <div class="text-h6">Completely Secure</div>
           <q-separator />
@@ -29,7 +29,7 @@
           of them knowing who you are!
         </q-card-section>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-4 col-xs-12">
         <q-card-section>
           <div class="text-h6">By AdDU Students, for AdDU Students</div>
           <q-separator />
@@ -41,7 +41,7 @@
           experience and give constructive criticisms to their professors.
         </q-card-section>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-4 col-xs-12">
         <q-card-section>
           <div class="text-h6">More Features!</div>
           <q-separator />

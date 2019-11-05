@@ -1,11 +1,11 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="fit row wrap justify-center items-start">
     <q-header class="row wrap justify-center items-start">
-      <q-toolbar class="col-7">
-        <q-toolbar-title class="col-2">
+      <q-toolbar class="col-md-7 col-sm-10 col-xs-12">
+        <q-toolbar-title class="col-md-2 col-sm-4 col-xs-7 ">
           Rate AdDU Profs
         </q-toolbar-title>
-        <q-input class="q-ma-sm col-10" rounded dark standout
+        <q-input class="q-ma-sm col-md-10 col-sm-8 col-xs-5" rounded dark standout
           v-model="search" placeholder="Search Professor/Class"
         >
           <template v-slot:append>
@@ -16,7 +16,7 @@
       <q-tabs
         v-model="tab"
         inline-label
-        class="bg-primary text-white col-7"
+        class="bg-primary text-white col-md-7 col-sm-10 col-xs-12"
       >
         <q-tab name="home"  label="Home" />
         <q-tab name="allProfessors"  label="All Professors" />
@@ -25,8 +25,8 @@
         <q-tab name="contactDev" label="Contact Dev" />
       </q-tabs>
     </q-header>
-    <q-page-container class="fit row wrap justify-center items-start ripple-background">
-      <router-view class="col-7" />
+    <q-page-container class="fit row wrap justify-center items-start ripple-background q-mx-lg">
+      <router-view class="col-md-7 col-sm-10 col-xs-12" />
       <div class="circle xxlarge shade1"></div>
       <div class="circle xlarge shade2"></div>
       <div class="circle large shade3"></div>
