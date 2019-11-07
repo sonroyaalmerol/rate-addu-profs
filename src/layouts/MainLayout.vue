@@ -27,11 +27,12 @@
         inline-label
         class="bg-primary text-white col-md-7 col-sm-10 col-xs-12"
       >
-        <q-tab name="home"  label="Home" />
-        <q-tab name="allProfessors"  label="All Professors" />
-        <q-tab name="professorsNeedingReview" label="Professors Needing Review" />
-        <q-tab name="addProfessor" label="Add Professor" />
-        <q-tab name="contactDev" label="Contact Dev" />
+        <q-route-tab name="home" label="Home" to="/" />
+        <q-route-tab name="allProfessors" label="All Professors" to="/professors" />
+        <q-route-tab name="addProfessor" label="Add Professor" to="/add" />
+        <q-tab name="contactDev" label="Contact Dev" 
+          @click.stop="mail"
+        />
       </q-tabs>
     </q-header>
     <q-page-container class="fit row wrap justify-center items-start q-mx-lg">
@@ -57,6 +58,20 @@ export default {
       tab: 'home',
       search: '',
     };
+  },
+
+  methods: {
+    mail() {
+      window.location = 'mailto:mail@example.org';
+    },
+  },
+
+  watch: {
+    tab(next, prev) {
+      if (next === 'contactDev') {
+        this.tab = prev
+      }
+    },
   },
 };
 </script>
