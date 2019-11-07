@@ -66,12 +66,13 @@ export default {
         department: '',
       },
       accept: false,
+      token: '',
     };
   },
   methods: {
     recaptcha() {
       this.$recaptcha('login').then((token) => {
-        console.log(token) // Will print the token
+        this.token = token // Will print the token
       })
     },
   },
