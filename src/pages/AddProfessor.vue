@@ -9,8 +9,7 @@
           Search and make sure the professor is not yet in our database!
         </q-banner>
         <q-form
-          @submit="onSubmit"
-          @reset="onReset"
+          @submit="recaptcha"
           class="q-gutter-md q-my-lg"
         >
           <q-input
@@ -47,7 +46,6 @@
 
           <div>
             <q-btn label="Submit" type="submit" color="primary"/>
-            <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
           </div>
 
         </q-form>
@@ -69,6 +67,13 @@ export default {
       },
       accept: false,
     };
+  },
+  methods: {
+    recaptcha() {
+      this.$recaptcha('login').then((token) => {
+        console.log(token) // Will print the token
+      })
+    },
   },
 };
 </script>
