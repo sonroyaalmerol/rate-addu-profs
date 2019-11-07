@@ -2,9 +2,9 @@
   "name": "addu-profs",
   "version": "0.0.1",
   "description": "An application that allows the students of Ateneo de Davao University to rate their professors.",
-  "productName": "AdDU Profs",
+  "productName": "Rate AdDU Professors",
   "cordovaId": "com.mikumaprojects.adduprofs",
-  "capacitorId": "",
+  "capacitorId": "com.mikumaprojects.adduprofs",
   "author": "Son Roy Almerol <sonroya.almerol@gmail.com>",
   "private": true,
   "scripts": {
